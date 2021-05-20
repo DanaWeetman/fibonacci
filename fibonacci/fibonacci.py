@@ -1,5 +1,14 @@
+"""Return the n-th Fibonacci number function."""
+
+
+from numbers import Integral
+
+
 def fib(n):
     """Return the n-th Fibonacci number."""
+    if not isinstance(n, Integral):
+        raise TypeError(
+            f"fib expects an integerno a {type(n).__name__}")
     if n == 0:
         return 0
     elif n == 1:
